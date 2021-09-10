@@ -15,9 +15,9 @@ public class MaxProductSubArray {
     }
 
     private static long maxProductSubArray(int[] arr) {
-        long minVal = Long.valueOf(arr[0]);
-        long maxVal = Long.valueOf(arr[0]);
-        long maxProduct = Long.valueOf(arr[0]);
+        long minVal = arr[0];
+        long maxVal = arr[0];
+        long maxProduct = arr[0];
         for(int i = 1; i < arr.length; i++) {
             int num = arr[i];
             if(num < 0) {
