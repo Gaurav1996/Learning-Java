@@ -12,6 +12,7 @@ repositories {
 }
 
 dependencies {
+    implementation group: 'com.chargebee', name: 'chargebee-java', version: '2.8.5'
     testImplementation(
             'junit:junit:4.12',
             'org.junit.jupiter:junit-jupiter-api:5.4.2',

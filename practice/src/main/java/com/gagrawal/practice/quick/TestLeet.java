@@ -246,6 +246,7 @@ public class TestLeet {
         int m = matrix.length;
         int n = matrix[0].length;
         List<Integer> out = new ArrayList<>(m*n);
+        List<Set<Character>> bb = new ArrayList<>();
         int rows = m - 1;
         int cols = n - 1;
         int i = 0;

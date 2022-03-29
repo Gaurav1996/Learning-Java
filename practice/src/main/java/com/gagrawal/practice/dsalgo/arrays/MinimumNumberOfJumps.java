@@ -9,13 +9,28 @@ package com.gagrawal.practice.dsalgo.arrays;
  */
 public class MinimumNumberOfJumps {
     public static void main(String[] args) {
-        int[] arr = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
-        //int[] arr = {2,3,1,1,4};
-        int minJumps = minJumps(arr);
+//        int[] arr = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
+        int[] arr = {2,3,1,1,4};
+        //int minJumps = minJumpsGFG(arr);
+        int minJumps = minJumpsLCDiscussion(arr);
         System.out.println("Minimum number of jumps to reach the end of the array is : " + minJumps);
     }
 
-    private static int minJumps(int[] arr) {
+    private static int minJumpsLCDiscussion(int[] nums) {
+        int jumps = 0;
+        int currEnd = 0;
+        int maxR = 0;
+        for(int i = 0; i < nums.length -1 ; i++) {
+            maxR = Math.max(maxR, i + nums[i]);
+            if(i == currEnd) {
+                jumps++;
+                currEnd = maxR;
+            }
+        }
+        return jumps;
+    }
+
+    private static int minJumpsGFG(int[] arr) {
         if(arr[0] == 0) {
             return -1;
         }
